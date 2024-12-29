@@ -2,6 +2,7 @@
     --bar-color: #6894d6;
     --grid-color: #2e3d66;
     --text-color: rgb(255, 255, 255);
+    --content-text-color: rgba(236, 220, 206, 0.932);
 }
 
 *{
@@ -17,7 +18,7 @@ h1{
 
 p{
     font-size: 24px;
-    color:rgba(236, 220, 206, 0.932);
+    color:var(--content-text-color);
 
 }
 
@@ -125,7 +126,7 @@ p{
 
 .links-list a{
     text-decoration: none;
-    color: rgba(236, 220, 206, 0.932);
+    color:var(--content-text-color);
     font-size: 30px;
 
 }
@@ -177,7 +178,7 @@ footer{
 }
 
 .skills-list{
-    color: rgba(236, 220, 206, 0.932);
+    color: var(--content-text-color);
     font-size: x-large;
 
 }
@@ -195,15 +196,13 @@ footer p{
     gap: 2rem;
     flex-direction: column;
 
-
 }
 
 #portrait-photo{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     float: left;
     
-
 }
 
 .box1{
@@ -211,7 +210,6 @@ footer p{
     width: 80%;
     border-radius: 20px 20px 20px 0;
     background: linear-gradient(to left, rgb(21, 4, 82, 1), rgba(21, 4, 82, 0));
-
 
 }
 
@@ -238,37 +236,6 @@ footer p{
 }
 
 
-/* .pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%; 
-    background-image: 
-        linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
-    background-size: 10px 10px; 
-    
-    z-index: 1;
-    pointer-events: none;
-}
-
-.pattern2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%; 
-    background-image: 
-        linear-gradient(to right, var(--grid-color) 2px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-color) 2px, transparent 1px);
-    background-size: 100px 100px; 
-    
-    z-index: 1;
-    pointer-events: none;
-} */
-
-
 .footercontainer{
     background-color: rgb(52, 62, 119);
 
@@ -279,6 +246,46 @@ footer p{
 
     text-shadow: 0 0 5px lightblue, 0 0 10px lightblue, 0 0 20px lightblue;
 
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 2rem;
+}
+
+.contact-form label {
+    font-weight: normal;
+    color: var(--content-text-color);
+    font-size:large;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #0077b5;
+    color: var(--content-text-color);
+    font-weight:normal;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #005983;
 }
 
 @media(min-width: 500px){
