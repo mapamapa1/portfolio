@@ -1,45 +1,235 @@
+:root {
+    --bar-color: #6894d6;
+    --grid-color: #2e3d66;
+    --text-color: rgb(255, 255, 255);
+}
+
 *{
     margin: 0px;
     font-family: "kanit", "sans-serif";
 }
 
+h1{
+    font-size: 40px;
+    color: rgba(252, 185, 131, 0.932);
+
+}
+
+p{
+    font-size: 24px;
+    color:rgba(236, 220, 206, 0.932);
+
+}
+
 .navbar{
     
+    position: relative;
+    z-index: 10;
     display: flex;
-    justify-content: center;
-    background-color:rgb(52, 62, 119);
-    height: 100px;
+    justify-content: space-between;
+    /* background-color:var(--bar-color); */
+    height: 200px;
     align-items: center;
-    /* padding: 1rem; */
-    
+  
+    /* padding: 1rem; */    
+
+}
+
+.nav-background{
+    background-color:var(--bar-color);
+    position: absolute;
+    z-index: 15;
+    width: 100%;
+    height:100%;
+
 
 }
 
 .navelements{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
+    list-style-type: none;
 
-    gap: 0.5rem;
-    background-color: rgb(52, 62, 119);
+    gap: 1rem;
+    /* background-color: var(--bar-color); */
     padding: 1rem;
+    position: relative;
+    z-index : 17;
+
 
 }
 
 .navbutton{
-    font-size: 20px;
+    font-size: 22px;
     height: 1rem;
     
-    background-color:rgb(52, 62, 119);
-    color: azure;
-    text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);
-    user-select: none
-    
-    
+    /* background-color:var(--bar-color); */
+    color: var(--text-color);
+    text-shadow: 
+    0px 3px 2px rgba(0, 0, 0, 0.7);
+    user-select: none;
 
     
 }
+
+.clouds{
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-end; 
+    height: 100%; 
+    z-index: 16;
+
+}
+
+.clouds img{
+    width: 200px; 
+    height: auto; 
+    object-fit: contain;
+    
+}  
+
+#cloud-right{
+    transform: scaleX(-1);
+    transform-origin: center;
+ 
+
+}
+
+.movingcloud{
+    position: absolute;
+    top: 40px;
+    left: 300px;
+    z-index: 16;
+
+}
+
+.movingcloud img{
+    width: 170px;
+    height: auto;
+
+
+}
+
+
+#container1{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 5rem;
+   
+
+}
+
+.text-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    overflow: hidden;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgb(92, 131, 204), rgb(8, 29, 56));
+    min-height: 100vh;
+    position: relative;
+    flex: 1;
+
+}
+
+footer{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;  
+
+
+}
+
+.skills-list{
+    color: rgba(236, 220, 206, 0.932);
+    font-size: x-large;
+
+}
+
+footer p{
+
+    font-size: 20px; 
+}
+
+.content-body{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    overflow: hidden;
+    gap: 2rem;
+    flex-direction: column;
+
+
+}
+
+#portrait-photo{
+    width: 200px;
+    height: 200px;
+    float: left;
+    
+
+}
+
+.box1{
+    height: 80%;
+    width: 80%;
+    border-radius: 20px 20px 20px 0;
+    background: linear-gradient(to left, rgb(21, 4, 82, 1), rgba(21, 4, 82, 0));
+
+
+}
+
+
+/* .pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-image: 
+        linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+    background-size: 10px 10px; 
+    
+    z-index: 1;
+    pointer-events: none;
+}
+
+.pattern2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-image: 
+        linear-gradient(to right, var(--grid-color) 2px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-color) 2px, transparent 1px);
+    background-size: 100px 100px; 
+    
+    z-index: 1;
+    pointer-events: none;
+} */
+
+
+.footercontainer{
+    background-color: rgb(52, 62, 119);
+
+}
+
 
 .navbutton:hover{
 
@@ -56,14 +246,36 @@
 
 @media(min-width: 700px){
     .navelements{
-        width: 70%
+        width: 70%;
+        gap: 2rem;
+    }
+
+    .content-body{
+        width: 70%;
+        flex-direction: row
     }
 
 }
 
-@media(min-width: 1200px){
+@media(min-width: 1300px){
     .navelements{
-        width: 50%
+        width: 50%;
+        gap: 4rem;
+        
+    }
+
+    .content-body{
+        width: 50%;
+
+    }
+
+}
+
+@media(min-width: 1550px){
+    .navelements{
+        width: 50%;
+        gap: 6rem;
+        
     }
 
 }
