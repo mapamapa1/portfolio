@@ -1,10 +1,10 @@
 const container1 = document.getElementById('container1');
 
 function clearAndAnimateContainer() {
-  container1.innerHTML = ''; // Clear existing content
-  container1.classList.remove('animate'); // Remove any previous animation
-  void container1.offsetWidth; // Trigger reflow to restart animation
-  container1.classList.add('animate'); // Add animation class
+  container1.innerHTML = '';
+  container1.classList.remove('animate');
+  void container1.offsetWidth;
+  container1.classList.add('animate');
 }
 
 
@@ -17,7 +17,7 @@ document.getElementById('nav1').addEventListener('click', function () {
     section.classList.add('content-body');
 
     const img = document.createElement('img');
-    img.src = 'images/face.png';
+    img.src = 'images/face1.png';
     img.alt = 'portrait-photo';
     img.id = 'portrait-photo';
 
@@ -64,7 +64,7 @@ document.getElementById('nav2').addEventListener('click', function () {
   const skill3 = document.createElement('li');
   skill3.textContent = 'SQL / ADO.NET / Entity Framework';
   const skill4 = document.createElement('li');
-  skill4.textContent = 'React';
+  skill4.textContent = 'React(soon)';
   const skill5 = document.createElement('li');
   skill5.textContent = 'Python';
 
@@ -126,6 +126,109 @@ document.getElementById('nav4').addEventListener('click', function () {
 
   linksList.appendChild(link1);
   linksList.appendChild(link2);
+
+  section.appendChild(heading);
+  section.appendChild(linksList);
+
+  container1.appendChild(section);
+});
+
+document.getElementById('nav5').addEventListener('click', function () {
+ 
+  clearAndAnimateContainer();
+
+
+  const section = document.createElement('section');
+  section.classList.add('content-body');
+
+
+  const heading = document.createElement('h1');
+  heading.textContent = "Contact Me:";
+
+
+  const form = document.createElement('form');
+  form.classList.add('contact-form');
+  form.action = 'https://formshow.systementor.se/'; 
+  form.method = 'POST';
+
+  const nameLabel = document.createElement('label');
+  nameLabel.setAttribute('for', 'name');
+  nameLabel.textContent = 'Name:';
+  const nameInput = document.createElement('input');
+  nameInput.type = 'text';
+  nameInput.id = 'name';
+  nameInput.name = 'name';
+  nameInput.placeholder = 'Your name';
+  nameInput.required = true;
+
+  const emailLabel = document.createElement('label');
+  emailLabel.setAttribute('for', 'email');
+  emailLabel.textContent = 'Email:';
+  const emailInput = document.createElement('input');
+  emailInput.type = 'email';
+  emailInput.id = 'email';
+  emailInput.name = 'email';
+  emailInput.placeholder = 'Your email';
+  emailInput.required = true;
+
+  const messageLabel = document.createElement('label');
+  messageLabel.setAttribute('for', 'message');
+  messageLabel.textContent = 'Message:';
+  const messageTextarea = document.createElement('textarea');
+  messageTextarea.id = 'message';
+  messageTextarea.name = 'message';
+  messageTextarea.rows = 5;
+  messageTextarea.placeholder = 'Your message';
+  messageTextarea.required = true;
+
+  const submitButton = document.createElement('button');
+  submitButton.type = 'submit';
+  submitButton.textContent = 'Send';
+
+  form.appendChild(nameLabel);
+  form.appendChild(nameInput);
+  form.appendChild(emailLabel);
+  form.appendChild(emailInput);
+  form.appendChild(messageLabel);
+  form.appendChild(messageTextarea);
+  form.appendChild(submitButton);
+
+  section.appendChild(heading);
+  section.appendChild(form);
+
+  container1.appendChild(section);
+});
+
+document.getElementById('nav3').addEventListener('click', function () {
+
+  clearAndAnimateContainer();
+
+  const section = document.createElement('section');
+  section.classList.add('content-body');
+
+  const heading = document.createElement('h1');
+  heading.textContent = "Resume / References:";
+
+  const linksList = document.createElement('ul');
+  linksList.classList.add('links-list');
+
+  const cv = document.createElement('li');
+  const cvlink = document.createElement('a');
+  cvlink.href = 'CV.text'; 
+  cvlink.download = 'CV.text';
+
+
+  const downloadicon = document.createElement('i');
+  downloadicon.classList.add('fa-solid', 'fa-file-arrow-down'); 
+  downloadicon.style.marginRight = '10px'; 
+
+  const cvtext = document.createTextNode('Download CV');
+  cvlink.appendChild(downloadicon);
+  cvlink.appendChild(cvtext);
+  cv.appendChild(cvlink);
+
+  
+  linksList.appendChild(cv);
 
   section.appendChild(heading);
   section.appendChild(linksList);
