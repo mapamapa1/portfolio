@@ -235,3 +235,4 @@ document.getElementById('nav3').addEventListener('click', function () {
 
   container1.appendChild(section);
 });
+
