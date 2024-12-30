@@ -158,6 +158,8 @@ p{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    user-select: none;
+
 
     overflow: hidden;
 
@@ -202,6 +204,7 @@ footer p{
     overflow: hidden;
     gap: 2rem;
     flex-direction: column;
+    user-select: none;
 
 }
 
