@@ -12,7 +12,7 @@ Flexboxes are used pretty much everywhere.
 
 When scaling down the viewport I have tried to fit the objects better on screen and taken away some elements to fit all the navigation buttons(still work in progress to make it perfect).
 
-I have also added a weather API that fetches the local weather from weatherapi.com
+I have also added a weather API that fetches the weather in Stockholm from weatherapi.com
 
 
 
