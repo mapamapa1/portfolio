@@ -7,9 +7,7 @@ function clearAndAnimateContainer() {
   container1.classList.add('animate');
 }
 
-
 document.getElementById('nav1').addEventListener('click', function () {
-
 
     clearAndAnimateContainer();
 
@@ -62,18 +60,21 @@ document.getElementById('nav2').addEventListener('click', function () {
   const skill2 = document.createElement('li');
   skill2.textContent = 'HTML / CSS';
   const skill3 = document.createElement('li');
-  skill3.textContent = 'SQL / ADO.NET / Entity Framework';
+  skill3.textContent = 'Javascript';
   const skill4 = document.createElement('li');
-  skill4.textContent = 'React(soon)';
+  skill4.textContent = 'React';
   const skill5 = document.createElement('li');
-  skill5.textContent = 'Python';
+  skill5.textContent = 'SQL / ADO.NET / Entity Framework';
+  const skill6 = document.createElement('li');
+  skill6.textContent = 'Python';
+
 
   skillsList.appendChild(skill1);
   skillsList.appendChild(skill2);
   skillsList.appendChild(skill3);
   skillsList.appendChild(skill4);
   skillsList.appendChild(skill5);
-
+  skillsList.appendChild(skill6);
 
   section.appendChild(heading);
   section.appendChild(skillsList);
@@ -129,72 +130,6 @@ document.getElementById('nav4').addEventListener('click', function () {
 
   section.appendChild(heading);
   section.appendChild(linksList);
-
-  container1.appendChild(section);
-});
-
-document.getElementById('nav5').addEventListener('click', function () {
- 
-  clearAndAnimateContainer();
-
-
-  const section = document.createElement('section');
-  section.classList.add('content-body');
-
-
-  const heading = document.createElement('h1');
-  heading.textContent = "Contact Me:";
-
-
-  const form = document.createElement('form');
-  form.classList.add('contact-form');
-  form.action = 'https://formshow.systementor.se/'; 
-  form.method = 'POST';
-
-  const nameLabel = document.createElement('label');
-  nameLabel.setAttribute('for', 'name');
-  nameLabel.textContent = 'Name:';
-  const nameInput = document.createElement('input');
-  nameInput.type = 'text';
-  nameInput.id = 'name';
-  nameInput.name = 'name';
-  nameInput.placeholder = 'Your name';
-  nameInput.required = true;
-
-  const emailLabel = document.createElement('label');
-  emailLabel.setAttribute('for', 'email');
-  emailLabel.textContent = 'Email:';
-  const emailInput = document.createElement('input');
-  emailInput.type = 'email';
-  emailInput.id = 'email';
-  emailInput.name = 'email';
-  emailInput.placeholder = 'Your email';
-  emailInput.required = true;
-
-  const messageLabel = document.createElement('label');
-  messageLabel.setAttribute('for', 'message');
-  messageLabel.textContent = 'Message:';
-  const messageTextarea = document.createElement('textarea');
-  messageTextarea.id = 'message';
-  messageTextarea.name = 'message';
-  messageTextarea.rows = 5;
-  messageTextarea.placeholder = 'Your message';
-  messageTextarea.required = true;
-
-  const submitButton = document.createElement('button');
-  submitButton.type = 'submit';
-  submitButton.textContent = 'Send';
-
-  form.appendChild(nameLabel);
-  form.appendChild(nameInput);
-  form.appendChild(emailLabel);
-  form.appendChild(emailInput);
-  form.appendChild(messageLabel);
-  form.appendChild(messageTextarea);
-  form.appendChild(submitButton);
-
-  section.appendChild(heading);
-  section.appendChild(form);
 
   container1.appendChild(section);
 });
