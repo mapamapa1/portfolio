@@ -152,7 +152,6 @@ document.getElementById('nav3').addEventListener('click', function () {
   cvlink.href = 'CV.text'; 
   cvlink.download = 'CV.text';
 
-
   const downloadicon = document.createElement('i');
   downloadicon.classList.add('fa-solid', 'fa-file-arrow-down'); 
   downloadicon.style.marginRight = '10px'; 
@@ -161,7 +160,6 @@ document.getElementById('nav3').addEventListener('click', function () {
   cvlink.appendChild(downloadicon);
   cvlink.appendChild(cvtext);
   cv.appendChild(cvlink);
-
   
   linksList.appendChild(cv);
 
@@ -171,3 +169,19 @@ document.getElementById('nav3').addEventListener('click', function () {
   container1.appendChild(section);
 });
 
+const navButtons = document.querySelectorAll('.navbutton');
+
+navButtons.forEach(button => {
+    button.addEventListener('click', function () {
+
+        navButtons.forEach(btn => btn.classList.remove('active'));
+
+        this.classList.add('active');
+    });
+});
+
+const introductionButton = document.getElementById('nav1');
+
+window.addEventListener('DOMContentLoaded', function () {
+  introductionButton.click();
+});
